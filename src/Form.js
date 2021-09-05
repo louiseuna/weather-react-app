@@ -30,11 +30,12 @@ export default function Form(event) {
   let form = (
     <form onSubmit={submitCity}>
       <input
+        class="search-form"
         type="search"
         placeholder="Enter a city..."
         onChange={updateWeather}
       />
-      <input type="submit" />
+      <input class="submit-button" type="submit" />
     </form>
   );
 

@@ -13,6 +13,20 @@ h1 {
 form {
   margin-bottom: 20px;
 }
+form .search-form {
+  border-radius: 5px;
+}
+form .submit-button {
+  margin-left: 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(115, 115, 194);
+}
+form .submit-button:hover {
+  color: rgb(115, 115, 194);
+  background-color: #fff;
+  cursor: pointer;
+}
 ul.weather-display {
   padding-top: 10px;
   list-style-type: none;
