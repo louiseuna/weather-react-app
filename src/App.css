@@ -7,6 +7,25 @@
   pointer-events: none;
 }
 
+h1 {
+  color: rgb(115, 115, 194);
+}
+form {
+  margin-bottom: 20px;
+}
+ul.weather-display {
+  padding-top: 10px;
+  list-style-type: none;
+  border: rgb(115, 115, 194) solid 4px;
+  border-radius: 30px;
+  width: 28%;
+  margin: 0 auto;
+}
+.weather-display li {
+  text-align: center;
+  margin-left: -40px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

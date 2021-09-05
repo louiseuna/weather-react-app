@@ -42,7 +42,7 @@ export default function Form(event) {
     return (
       <div>
         {form}
-        <ul>
+        <ul class="weather-display">
           <li> Temperature: {weather.temperature}°C </li>
           <li> Humidity: {weather.humidity}% </li>
           <li> Windspeed: {weather.wind} km/hr </li>
