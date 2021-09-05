@@ -25,6 +25,15 @@ ul.weather-display {
   text-align: center;
   margin-left: -40px;
 }
+.github,
+.github a {
+  color: rgb(115, 115, 194);
+  text-decoration: none;
+}
+.github a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
