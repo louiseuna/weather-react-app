@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate.js";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Form(event) {
   const [city, setCity] = useState("");
@@ -47,35 +48,7 @@ export default function Form(event) {
   );
 
   if (loaded) {
-    return (
-      <div className="container">
-        <ul className="weather-display">
-          <li>
-            <h2 className="city-display">{weather.city}</h2>
-          </li>
-          <li className="date">
-            Last updated: <FormattedDate date={weather.data.date} />
-          </li>
-          <li className="description">{weather.description}</li>
-          <li className="temp">
-            {" "}
-            {weather.temperature}
-            <span className="celsius units">°C</span>{" "}
-          </li>
-          <li className="humidity">
-            {" "}
-            Humidity: {weather.humidity}
-            <span>%</span>
-          </li>
-          <li className="wind">
-            {" "}
-            Windspeed: {weather.wind}
-            <span className="units"> km/hr</span>
-          </li>
-          <img src={weather.icon} alt="Weather Icon" />
-        </ul>
-      </div>
-    );
+    return <WeatherInfo />;
   } else {
     // const apiKey = "c284e41e5087d96e9a0af3b148134460";
     // let city = "London";
