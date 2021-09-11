@@ -54,7 +54,7 @@ export default function Form(event) {
             <h2 className="city-display">{weather.city}</h2>
           </li>
           <li className="date">
-            Last updated: <FormattedDate date={date} />
+            Last updated: <FormattedDate date={weather.data.date} />
           </li>
           <li className="description">{weather.description}</li>
           <li className="temp">
