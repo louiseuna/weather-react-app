@@ -4,7 +4,7 @@ import Form from "./Form";
 function App() {
   return (
     <div className="App">
-      <div className="App">
+      <div className="container">
         <h1>Weather App</h1>
         <Form />
         <p class="github">
@@ -15,7 +15,7 @@ function App() {
           >
             Open Source
           </a>{" "}
-          code by Louise Dicks
+          code by Louise Dickss
         </p>
       </div>
     </div>
