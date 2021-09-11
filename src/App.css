@@ -42,6 +42,7 @@ ul.weather-display {
   margin: 0 auto;
 }
 h2 .city-display,
+li.date,
 li.temp,
 li.description,
 li.humidity,
@@ -64,6 +65,10 @@ h2.city-display {
   text-align: left;
   left: -20px;
 }
+li.date {
+  left: 41px;
+  top: 65px;
+}
 .weather-display li span.celsius {
   font-size: 14px;
   position: absolute;
@@ -73,30 +78,30 @@ h2.city-display {
   font-weight: 600;
   font-size: 44px;
   left: 141px;
-  top: 119px;
+  top: 129px;
 }
 .weather-display li span.units {
   font-size: 14px;
 }
 .weather-display li.description {
   text-transform: capitalize;
-  top: 85px;
+  top: 95px;
   left: 41px;
 }
 .weather-display img {
   position: absolute;
   left: 20px;
-  top: 95px;
+  top: 105px;
 }
 li.humidity,
 li.wind {
   font-size: 17px;
   color: #aeadac;
-  top: 124px;
+  top: 134px;
   left: 250px;
 }
 li.wind {
-  top: 147px;
+  top: 157px;
 }
 .github,
 .github a {

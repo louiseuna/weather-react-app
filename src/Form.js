@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate.js";
 
 export default function Form(event) {
   const [city, setCity] = useState("");
@@ -8,8 +9,10 @@ export default function Form(event) {
 
   function displayWeather(response) {
     setLoaded(true);
+    console.log(response.data.dt);
     setWeather({
       setLoaded: true,
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       description: response.data.weather[0].description,
       temperature: Math.round(response.data.main.temp),
@@ -33,23 +36,25 @@ export default function Form(event) {
   let form = (
     <form onSubmit={submitCity}>
       <input
-        class="search-form"
+        className="search-form"
         autoFocus="on"
         type="search"
         placeholder="Enter a city to find out..."
         onChange={updateWeather}
       />
-      <input class="submit-button" type="submit" value="Search" />
+      <input className="submit-button" type="submit" value="Search" />
     </form>
   );
 
   if (loaded) {
     return (
       <div className="container">
-        {form}
         <ul className="weather-display">
           <li>
             <h2 className="city-display">{weather.city}</h2>
+          </li>
+          <li className="date">
+            Last updated: <FormattedDate date={date} />
           </li>
           <li className="description">{weather.description}</li>
           <li className="temp">
