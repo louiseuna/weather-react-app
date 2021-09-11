@@ -48,14 +48,44 @@ export default function Form(event) {
   );
 
   if (loaded) {
-    return <WeatherInfo />;
+    return (
+      <div className="container">
+        {form}
+        <WeatherInfo />
+        <ul className="weather-display">
+          <li>
+            <h2 className="city-display">{weather.city}</h2>
+          </li>
+          <li className="date">
+            Last updated: <FormattedDate date={weather.date} />
+          </li>
+          <li className="description">{weather.description}</li>
+          <li className="temp">
+            {" "}
+            {weather.temperature}
+            <span className="celsius units">°C</span>{" "}
+          </li>
+          <li className="humidity">
+            {" "}
+            Humidity: {weather.humidity}
+            <span>%</span>
+          </li>
+          <li className="wind">
+            {" "}
+            Windspeed: {weather.wind}
+            <span className="units"> km/hr</span>
+          </li>
+          <img src={weather.icon} alt="Weather Icon" />
+        </ul>
+      </div>
+    );
   } else {
-    // const apiKey = "c284e41e5087d96e9a0af3b148134460";
-    // let city = "London";
-    // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-    // axios.get(apiUrl).then(displayWeather);
+    const apiKey = "c284e41e5087d96e9a0af3b148134460";
+    let city = "London";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayWeather);
 
-    // return "Loading...";
-    return form;
+    return "Loading...";
+    // return form;
   }
 }
