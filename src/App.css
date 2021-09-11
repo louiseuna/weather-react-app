@@ -7,16 +7,19 @@
   pointer-events: none;
 }
 
-h1 {
+h1.title {
+  font-size: 36px;
   color: rgb(115, 115, 194);
 }
 form {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 form .search-form {
+  font-size: 18px;
   border-radius: 5px;
 }
 form .submit-button {
+  font-size: 18px;
   margin-left: 5px;
   border-radius: 5px;
   color: #fff;
@@ -28,20 +31,77 @@ form .submit-button:hover {
   cursor: pointer;
 }
 ul.weather-display {
-  padding-top: 10px;
+  position: relative;
+  font-size: 20px;
+  padding: 10px 40px 20px 40px;
   list-style-type: none;
   border: rgb(115, 115, 194) solid 4px;
   border-radius: 30px;
-  width: 28%;
+  width: 400px;
+  min-height: 200px;
   margin: 0 auto;
 }
+h2 .city-display,
+li.temp,
+li.description,
+li.humidity,
+li.wind {
+  position: absolute;
+}
+li.icon {
+  position: inherit;
+}
+h2.city-display {
+  left: 30px;
+  max-width: 300px;
+  text-transform: capitalize;
+  color: rgb(115, 115, 194);
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
 .weather-display li {
-  text-align: center;
-  margin-left: -40px;
+  text-align: left;
+  left: -20px;
+}
+.weather-display li span.celsius {
+  font-size: 14px;
+  position: absolute;
+  top: 2px;
+}
+.weather-display li.temp {
+  font-weight: 600;
+  font-size: 44px;
+  left: 141px;
+  top: 119px;
+}
+.weather-display li span.units {
+  font-size: 14px;
+}
+.weather-display li.description {
+  text-transform: capitalize;
+  top: 85px;
+  left: 41px;
+}
+.weather-display img {
+  position: absolute;
+  left: 20px;
+  top: 95px;
+}
+li.humidity,
+li.wind {
+  font-size: 17px;
+  color: #aeadac;
+  top: 124px;
+  left: 250px;
+}
+li.wind {
+  top: 147px;
 }
 .github,
 .github a {
   color: rgb(115, 115, 194);
+  font-size: 16px;
   text-decoration: none;
 }
 .github a:hover {

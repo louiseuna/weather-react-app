@@ -9,6 +9,9 @@ export default function Form(event) {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+      setLoaded: true,
+      city: response.data.name,
+      description: response.data.weather[0].description,
       temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -31,30 +34,50 @@ export default function Form(event) {
     <form onSubmit={submitCity}>
       <input
         class="search-form"
+        autoFocus="on"
         type="search"
-        placeholder="Enter a city..."
+        placeholder="Enter a city to find out..."
         onChange={updateWeather}
       />
-      <input class="submit-button" type="submit" />
+      <input class="submit-button" type="submit" value="Search" />
     </form>
   );
 
   if (loaded) {
     return (
-      <div>
+      <div className="container">
         {form}
-        <ul class="weather-display">
-          <li> Temperature: {weather.temperature}°C </li>
-          <li> Humidity: {weather.humidity}% </li>
-          <li> Windspeed: {weather.wind} km/hr </li>
+        <ul className="weather-display">
           <li>
-            {" "}
-            <img src={weather.icon} alt="Weather Icon" />
+            <h2 className="city-display">{weather.city}</h2>
           </li>
+          <li className="description">{weather.description}</li>
+          <li className="temp">
+            {" "}
+            {weather.temperature}
+            <span className="celsius units">°C</span>{" "}
+          </li>
+          <li className="humidity">
+            {" "}
+            Humidity: {weather.humidity}
+            <span>%</span>
+          </li>
+          <li className="wind">
+            {" "}
+            Windspeed: {weather.wind}
+            <span className="units"> km/hr</span>
+          </li>
+          <img src={weather.icon} alt="Weather Icon" />
         </ul>
       </div>
     );
   } else {
+    // const apiKey = "c284e41e5087d96e9a0af3b148134460";
+    // let city = "London";
+    // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    // axios.get(apiUrl).then(displayWeather);
+
+    // return "Loading...";
     return form;
   }
 }

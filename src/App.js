@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
+        <h1 className="title">What's the Weather today?</h1>
         <Form />
         <p class="github">
           <a
@@ -15,7 +15,7 @@ function App() {
           >
             Open Source
           </a>{" "}
-          code by Louise Dickss
+          code by Louise Dicks
         </p>
       </div>
     </div>
