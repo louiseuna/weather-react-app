@@ -122,6 +122,9 @@ li.wind {
   li.wind {
     left: 220px;
   }
+  li.humidity {
+    top: 104px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
