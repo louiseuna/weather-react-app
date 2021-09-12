@@ -115,7 +115,8 @@ li.wind {
 }
 @media only screen and (max-width: 500px) {
   ul.weather-display {
-    width: 320px;
+    width: 300px;
+    padding: 10px;
   }
   li.humidity,
   li.wind {
