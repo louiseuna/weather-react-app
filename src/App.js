@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 className="title">What's the Weather today?</h1>
-        <Form />
+        <Form city="Lisbon" />
         <p class="github">
           <a
             href="https://github.com/louiseuna/weather-react-app"
