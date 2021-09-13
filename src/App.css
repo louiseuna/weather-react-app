@@ -46,11 +46,9 @@ li.date,
 li.temp,
 li.description,
 li.humidity,
-li.wind {
-  position: absolute;
-}
+li.wind,
 li.icon {
-  position: inherit;
+  position: absolute;
 }
 h2.city-display {
   left: 30px;
@@ -102,6 +100,11 @@ li.wind {
 }
 li.wind {
   top: 157px;
+}
+li.icon {
+  position: inherit;
+  top: 65px;
+  left: 12px;
 }
 .github,
 .github a {
