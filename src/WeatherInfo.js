@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemp from "./WeatherTemp";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
@@ -13,11 +14,7 @@ export default function WeatherInfo(props) {
           Last updated: <FormattedDate date={props.data.date} />
         </li>
         <li className="description">{props.data.description}</li>
-        <li className="temp">
-          {" "}
-          {props.data.temperature}
-          <span className="celsius units">°C</span>{" "}
-        </li>
+        <WeatherTemp celsius={props.data.temperature} />
         <li className="humidity">
           {" "}
           Humidity: {props.data.humidity}

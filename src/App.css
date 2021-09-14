@@ -67,10 +67,21 @@ li.date {
   left: 41px;
   top: 65px;
 }
-.weather-display li span.celsius {
+.weather-display li span.celsius,
+.weather-display li span.farhenheit {
+  color: #000;
+  display: inline-flex;
+  width: 38px;
   font-size: 14px;
   position: absolute;
   top: 2px;
+}
+.weather-display li span.units a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.weather-display li span.active {
+  color: rgb(115, 115, 194);
 }
 .weather-display li.temp {
   font-weight: 600;
@@ -78,9 +89,7 @@ li.date {
   left: 141px;
   top: 129px;
 }
-.weather-display li span.units {
-  font-size: 14px;
-}
+
 .weather-display li.description {
   text-transform: capitalize;
   top: 95px;
