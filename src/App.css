@@ -170,6 +170,10 @@ li.icon {
   ul.weather-display {
     width: 275px;
   }
+  .weather-display li span.celsius,
+  .weather-display li span.farhenheit {
+    width: 50px;
+  }
   li.icon {
     left: 7px;
   }
