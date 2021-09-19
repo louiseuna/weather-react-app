@@ -1,0 +1,19 @@
+.WeatherForecast {
+  position: relative;
+  bottom: 100px;
+  text-align: center;
+}
+.WeatherForecast .col {
+  display: inline-block;
+  margin: 0px 20px;
+}
+.WeatherForecastDay,
+.WeatherForecastTempsMax,
+.WeatherForecastTempsMin {
+  text-align: center;
+  font-size: 16px;
+}
+.WeatherForecastTempsMin {
+  color: #aeadac;
+  margin-left: 5px;
+}

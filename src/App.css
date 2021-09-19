@@ -1,3 +1,13 @@
+body {
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+}
 .App {
   text-align: center;
 }
@@ -36,9 +46,10 @@ ul.weather-display {
   padding: 10px 40px 20px 40px;
   list-style-type: none;
   border: rgb(115, 115, 194) solid 4px;
+  background-color: #fff;
   border-radius: 30px;
   width: 400px;
-  min-height: 200px;
+  min-height: 275px;
   margin: 0 auto;
 }
 h2 .city-display,
@@ -89,7 +100,6 @@ li.date {
   left: 141px;
   top: 129px;
 }
-
 .weather-display li.description {
   text-transform: capitalize;
   top: 95px;

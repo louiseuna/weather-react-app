@@ -9,7 +9,7 @@ export default function WeatherTemp(props) {
   }
   function showCelsius(event) {
     event.preventDefault();
-    setUnit("cesius");
+    setUnit("celsius");
   }
   function fahrenheit() {
     return props.celsius * 1.8 + 32;
