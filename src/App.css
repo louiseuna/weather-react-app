@@ -138,14 +138,47 @@ li.icon {
 @media only screen and (max-width: 500px) {
   ul.weather-display {
     width: 300px;
+    min-height: 300px;
     padding: 10px;
+  }
+  li.date,
+  .weather-display li.description {
+    left: 24px;
+  }
+  .weather-display li.temp {
+    left: 99px;
   }
   li.humidity,
   li.wind {
-    left: 220px;
+    left: 200px;
   }
   li.humidity {
-    top: 114px;
+    top: 128px;
+  }
+}
+@media only screen and (max-width: 312px) {
+  .weather {
+    height: 400px;
+  }
+  h1.title {
+    font-size: 20px;
+  }
+  form .search-form,
+  form .submit-button {
+    font-size: 15px;
+  }
+  ul.weather-display {
+    width: 275px;
+  }
+  li.icon {
+    left: 7px;
+  }
+  .weather-display li.temp {
+    left: 80px;
+  }
+  li.humidity,
+  li.wind {
+    left: 175px;
   }
 }
 
