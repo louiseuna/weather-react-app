@@ -81,7 +81,7 @@ li.date {
 .weather-display li span.celsius,
 .weather-display li span.farhenheit {
   color: #000;
-  display: inline-flex;
+  display: inline-block;
   width: 38px;
   font-size: 14px;
   position: absolute;
