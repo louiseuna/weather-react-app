@@ -13,6 +13,9 @@ export default function WeatherInfo(props) {
         <li className="date">
           Last updated: <FormattedDate date={props.data.date} />
         </li>
+        <li className="icon">
+          <WeatherIcon code={props.data.icon} size={52} />
+        </li>
         <li className="description">{props.data.description}</li>
         <WeatherTemp celsius={props.data.temperature} />
         <li className="humidity">
@@ -24,9 +27,6 @@ export default function WeatherInfo(props) {
           {" "}
           Windspeed: {props.data.wind}
           <span className="units"> km/hr</span>
-        </li>
-        <li className="icon">
-          <WeatherIcon code={props.data.icon} size={52} />
         </li>
       </ul>
     </div>
