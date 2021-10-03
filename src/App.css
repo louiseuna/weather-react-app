@@ -121,9 +121,9 @@ li.wind {
   top: 157px;
 }
 li.icon {
-  position: inherit;
-  top: 65px;
-  left: 12px;
+  position: absolute;
+  top: 130px;
+  left: 40px;
 }
 .github,
 .github a {
